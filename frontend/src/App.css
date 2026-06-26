@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap');
+/* Core Layout Reset */
+
+h1, h2, h3, h4, h5, h6, .brand-name {
+  /* Apply the bold heading font to titles */
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Prevents unwanted side-scrolling */
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-corporate);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  color: var(--primary-grey);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Marketplace Responsive Grid */
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.no-listings, .loading-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-muted);
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+  background: var(--primary-grey);
+  color: var(--bg-corporate);
+  padding: 10px;
+  border-top: 4px solid var(--accent-green);
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  /* This prevents the overlapping - min width of 250px per column */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  row-gap: 15px; 
+  column-gap: 40px;  
+  margin-bottom: 10px;
+}
+
+.footer-brand-name {
+  color: var(--accent-green);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.footer-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.rating-pill {
+  background: var(--accent-green);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.experience-text {
+  color: var(--bg-corporate);
+  font-size: 0.9rem;
+}
+
+.footer-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--bg-corporate);
+  margin-bottom: 15px;
+}
+
+.contact-item svg {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.footer-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-call, .btn-wa {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.btn-call {
+  background: transparent;
+  color: var(--bg-corporate);
+  border: none;
+  border: 1px solid var(--accent-green);
+}
+
+.btn-wa {
+  background: var(--accent-green);
+  color: var(--primary-grey);
+  
+}
+
+.btn-call:hover { 
+  background: var(--bg-corporate);
+color: var(--primary-grey); 
+}
+
+.btn-wa:hover { 
+  background: var(--bg-corporate);
+  color: var(--primary-grey);
+  border-color: var(--accent-green);
+  box-shadow: 0 5px 15px var(--accent-green);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--accent-green);
+  margin-top: 0px;
+  padding-top: 2%;
+  text-align: center;
+  color: var(--bg-corporate);
+  font-size: 0.85rem;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 600px) {
+  .section-title { font-size: 1.6rem; }
+  .footer-grid { text-align: center; }
+  .footer-rating-row, .contact-item { justify-content: center; }
+}

@@ -1,0 +1,207 @@
+.property-card {
+  background: var(--white);
+  border-radius: var(--radius-premium);
+  overflow: hidden;
+  box-shadow: var(--text-muted);
+  border: 1px solid var(--primary-grey);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px var(--text-muted);
+}
+.property-card:hover .property-img-actual {
+  transform: scale(1.1); /* Subtle zoom effect on hover */
+}
+.card-image {
+  height: 200px;
+  background: var(--bg-corporate); /* Placeholder color */
+  position: relative;
+  overflow: hidden;
+}
+.property-img-actual {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This prevents the "stretched" look */
+  display: block;
+  transition: transform 0.5s ease;
+}
+.verified-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--primary-grey);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 2; /* Ensures badge stays on top of image */
+}
+
+.category-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--bg-corporate);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-grey);
+  z-index: 2;
+}
+
+.card-content 
+{ 
+  padding: 20px; 
+}
+
+.property-title { 
+  margin: 0 0 8px 0; 
+  font-size: 1.2rem; 
+  color: var(--primary-grey);
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.property-specs {
+  border-top: 1px solid var(--bg-corporate);
+  padding-top: 12px;
+  margin-bottom: 20px;
+}
+
+.unit { 
+  color: var(--accent-green); 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price-label 
+{ 
+  font-size: 11px; 
+  color: var(--text-muted); 
+  display: block; 
+  text-transform: uppercase; 
+}
+
+.price-value 
+{ 
+  font-size: 1.4rem; 
+  color: var(--primary-grey); 
+  font-weight: 800; 
+}
+
+.view-btn {
+  background: var(--bg-corporate);
+  border: 1px solid var(--primary-grey);
+  color: var(--primary-grey);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.view-btn:hover 
+{ 
+  background: var(--accent-green); 
+  color: var(--primary-grey); 
+}
+
+
+
+/*Responsive Design */
+
+@media (max-width: 768px) {
+  .property-card:hover {
+    /* Prevent sticky hover effects on touch screens */
+    transform: none; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .property-card:hover .property-img-actual {
+    /* Prevent image magnification on touch interactions */
+    transform: none; 
+  }
+
+  .card-image {
+    height: 180px; /* Gracefully scale down image height */
+  }
+
+  .card-content {
+    padding: 16px; /* Consolidate internal white space */
+  }
+
+  .property-title {
+    font-size: 1.1rem; /* Slightly smaller typography */
+  }
+
+  .property-location {
+    margin-bottom: 12px;
+  }
+
+  .property-specs {
+    margin-bottom: 16px;
+    padding-top: 10px;
+  }
+}
+
+/* --- Mobile Devices (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .card-image {
+    height: 160px; /* Highly compact viewports */
+  }
+
+  .verified-badge {
+    top: 8px;
+    left: 8px;
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+
+  .category-tag {
+    bottom: 8px;
+    right: 8px;
+    padding: 3px 10px;
+    font-size: 11px;
+  }
+
+  .card-footer {
+    flex-direction: column; /* Stack details vertically on narrow mobile views */
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .price-box {
+    width: 100%;
+  }
+
+  .price-value {
+    font-size: 1.3rem;
+  }
+
+  .view-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 16px; /* Expand touch target height for easier tapping */
+    box-sizing: border-box;
+  }
+}

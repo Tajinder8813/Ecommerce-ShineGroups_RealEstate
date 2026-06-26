@@ -1,0 +1,755 @@
+/* Corporate Brochure Page Architecture */
+.services-hero-banner {
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: var(--radius-premium);
+}
+
+.services-hero-overlay {
+  max-width: 850px;
+}
+
+.corporate-tag {
+  color: var(--text-muted, #94a3b8);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--accent-green) 30%, transparent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.services-hero-banner h1 {
+  color: var(--accent-green, #16a34a);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 4px var(--text-main);
+}
+
+.services-hero-banner p {
+  color: var(--text-muted, #94a3b8);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Container Engine */
+.services-container {
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Who We Serve Intro Block */
+.intro-serve-section {
+  background: var(--white, #ffffff);
+  border-bottom: 1px solid var(--bg-corporate, #f8fafc);
+}
+
+.serve-box-layout {
+
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.service-badge-label {
+  color: var(--text-muted, #94a3b8);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.serve-box-layout h2 {
+  font-size: 2rem;
+  color: var(--text-main, #0f172a);
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 4px var(--text-muted);
+}
+
+.serve-box-layout p {
+  color: var(--text-muted, #94a3b8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Corporate Brochure Sections alternating grid */
+.brochure-section {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--bg-corporate, #f8fafc);
+}
+
+.finance-bg { background-color: var(--bg-corporate, #f8fafc); }
+.property-bg { background-color: var(--white, #ffffff); }
+.construction-bg { background-color: var(--bg-corporate, #f8fafc); }
+
+.brochure-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.layout-reversed {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+/* Left/Right Text Columns styling */
+.brochure-text-panel {
+  position: relative;
+  padding-left: 20px;
+}
+
+.vertical-indicator {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 2px;
+}
+
+.finance-accent { background-color: #16a34a; }
+.property-accent { background-color: #0284c7; }
+.construction-accent { background-color: #ea580c; }
+
+.panel-super-title {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted, #94a3b8);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.brochure-text-panel h2 {
+  font-size: 2.1rem;
+  color: var(--text-main, #0f172a);
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 4px var(--text-muted);
+}
+
+.panel-main-desc {
+  color: var(--text-muted, #94a3b8);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.sub-section-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-main, #0f172a);
+  font-weight: 700;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed var(--bg-corporate, #f8fafc);
+  padding-bottom: 6px;
+}
+
+/* Checklist Blocks */
+.sub-services-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.text-finance { color: #16a34a; }
+.text-property { color: #0284c7; }
+.text-construction { color: #ea580c; }
+
+/* Horizontal Linear Workflow Blocks inside sections */
+.workflow-mini-pipeline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  overflow-x: auto;
+}
+
+.pipeline-node {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+
+.node-num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted, #94a3b8);
+}
+
+.node-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main, #0f172a);
+  white-space: nowrap;
+}
+
+.pipeline-arrow {
+  color: var(--bg-corporate, #f8fafc);
+  flex-shrink: 0;
+}
+
+/* Right-side Graphic Panels Layouts */
+.brochure-image-panel {
+  min-height: 320px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.placeholder-finance { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 1px solid #bbf7d0; }
+.placeholder-property { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #bae6fd; }
+.placeholder-construction { background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); border: 1px solid #fed7aa; }
+
+.inner-graphic-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  max-width: 280px;
+}
+
+.inner-graphic-card h3 {
+  font-size: 16px;
+  color: #0f172a;
+  margin: 14px 0 8px;
+  font-weight: 700;
+}
+
+.inner-graphic-card p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.jba-spotlight {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.jba-spotlight h3 { color: white; }
+.jba-tag {
+  background: #38bdf8;
+  color: #0f172a;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* 🌌 ECOSYSTEM SECTION TIMELINE */
+.ecosystem-section {
+  background: #0f172a;
+  color: white;
+}
+
+.ecosystem-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px;
+}
+
+.ecosystem-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.ecosystem-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.ecosystem-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.ecosystem-flow-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.ecosystem-line-track {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #16a34a, #0284c7, #ea580c, #38bdf8);
+  z-index: 1;
+}
+
+.ecosystem-node-card {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 14px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.ecosystem-circle {
+  width: 50px;
+  height: 50px;
+  background: #1e293b;
+  border: 2px solid #64748b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.ecosystem-node-card:hover .ecosystem-circle {
+  transform: scale(1.1);
+  border-color: var(--accent-green, #22c55e);
+}
+
+.jba-highlight-node {
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.05);
+}
+.jba-highlight-node .ecosystem-circle {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.ecosystem-node-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.ecosystem-node-card p {
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Feature Trust Badges Grid */
+.brochure-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.trust-badge-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trust-badge-pill svg {
+  color: var(--accent-green, #22c55e);
+}
+
+/* 📞 CALL TO ACTION BANNER CONTAINER */
+.services-cta-banner {
+  background: linear-gradient(rgba(51, 53, 56, 0.85), rgba(51, 53, 56, 0.85)), url('../assets/logo_extracted.png') no-repeat center;
+  background-size: cover;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.services-cta-content h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-cta-content p {
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 28px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.services-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-cta-gold {
+  background-color: var(--accent-green, #16a34a);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 0 2px 4px var(--text-muted, #94a3b8);
+}
+
+.btn-cta-gold:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}
+
+.btn-cta-muted {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cta-muted:hover {
+  background-color: var(--bg-corporate, #f8fafc);
+  color: var(--text-muted, #94a3b8);
+
+}
+
+
+
+/* Responsive Adaptive Layer */
+
+/* ==========================================================
+   RESPONSIVE ADAPTIVE LAYER
+   ========================================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .services-container {
+    padding: 50px 20px;
+  }
+
+  .brochure-grid,
+  .layout-reversed {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .brochure-image-panel {
+    min-height: 260px;
+  }
+
+  .services-hero-banner h1,
+  .services-cta-content h2,
+  .ecosystem-header h2,
+  .brochure-text-panel h2,
+  .serve-box-layout h2 {
+    font-size: 2rem;
+  }
+
+  .ecosystem-flow-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ecosystem-line-track {
+    display: none;
+  }
+
+  .ecosystem-node-card {
+    min-width: 220px;
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+
+/* Mobile Landscape & Small Tablets */
+@media (max-width: 768px) {
+
+  .services-container {
+    padding: 40px 16px;
+  }
+
+  .services-hero-banner {
+    padding: 60px 20px;
+  }
+
+  .services-hero-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .services-hero-banner p,
+  .panel-main-desc,
+  .serve-box-layout p,
+  .ecosystem-header p,
+  .services-cta-content p {
+    font-size: 0.95rem;
+  }
+
+  .brochure-text-panel {
+    padding-left: 16px;
+  }
+
+  .brochure-text-panel h2,
+  .serve-box-layout h2,
+  .ecosystem-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .sub-services-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-mini-pipeline {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  .pipeline-arrow {
+    transform: rotate(90deg);
+    margin-left: 25px;
+  }
+
+  .pipeline-node {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .brochure-image-panel {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .inner-graphic-card {
+    max-width: 100%;
+  }
+
+  .ecosystem-flow-wrapper {
+    flex-direction: column;
+  }
+
+  .ecosystem-node-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .services-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-cta-gold,
+  .btn-cta-muted {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .brochure-trust-badges {
+    justify-content: center;
+  }
+}
+
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+  .services-container {
+    padding: 30px 12px;
+  }
+
+  .services-hero-banner {
+    padding: 40px 15px;
+  }
+
+  .corporate-tag,
+  .service-badge-label,
+  .panel-super-title,
+  .ecosystem-badge {
+    font-size: 10px;
+  }
+
+  .services-hero-banner h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .brochure-text-panel h2,
+  .serve-box-layout h2,
+  .ecosystem-header h2,
+  .services-cta-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .panel-main-desc,
+  .services-hero-banner p,
+  .serve-box-layout p,
+  .ecosystem-header p,
+  .services-cta-content p {
+    font-size: 0.9rem;
+  }
+
+  .inner-graphic-card {
+    padding: 20px;
+  }
+
+  .inner-graphic-card h3 {
+    font-size: 14px;
+  }
+
+  .inner-graphic-card p {
+    font-size: 12px;
+  }
+
+  .checklist-item {
+    font-size: 13px;
+  }
+
+  .trust-badge-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ecosystem-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ecosystem-node-card {
+    padding: 16px;
+  }
+
+  .btn-cta-gold,
+  .btn-cta-muted {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
+/*
+
+@media(max-width: 1024px) {
+  .ecosystem-flow-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .ecosystem-line-track {
+    left: 44px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #16a34a, #0284c7, #ea580c, #38bdf8);
+  }
+  .ecosystem-node-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    padding: 16px;
+  }
+  .ecosystem-circle {
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+@media(max-width: 992px) {
+  .brochure-grid, .brochure-grid.layout-reversed {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .brochure-image-panel {
+    order: -1; /* Pushes illustrations below text on layout collapse *//*
+  }
+  .sub-services-checklist {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+@media(max-width: 600px) {
+  .services-hero-banner h1 { font-size: 1.9rem; }
+  .brochure-text-panel h2 { font-size: 1.7rem; }
+  .vertical-on-mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .adaptive-arrow {
+    transform: rotate(90deg);
+    margin-left: 14px;
+  }
+  .services-cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-cta-gold, .btn-cta-muted {
+    width: 100%;
+    max-width: 280px;
+  }
+}*/

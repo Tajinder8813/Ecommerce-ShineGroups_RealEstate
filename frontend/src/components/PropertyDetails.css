@@ -1,0 +1,150 @@
+/* --- PropertyDetails.css --- */
+
+.details-page {
+  max-width: 1200px;
+  margin: 100px auto 60px; /* Space for fixed Navbar */
+  padding: 0 5%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Back Button Styling */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--primary-grey);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: var(--accent-green);
+}
+
+/* Main Container */
+.details-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Image gets slightly more space */
+  gap: 40px;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Section */
+.details-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  background-color: var(--bg-corporate);
+}
+
+/* Content Section */
+.details-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-info h1 {
+  font-size: 2.5rem;
+  color: var(--primary-grey);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.details-price {
+  font-size: 2rem;
+  color: var(--accent-green);
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+/* Specs Row (Location, Size) */
+.details-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.details-specs span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Description */
+.details-desc {
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: auto; /* Pushes contact buttons to bottom */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.details-actions {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: var(--accent-green);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #b5c22b; /* Slightly darker green */
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .details-container {
+    grid-template-columns: 1fr; /* Stack vertically on tablets */
+  }
+
+  .details-img {
+    height: 350px;
+  }
+  
+  .details-info {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-info h1 {
+    font-size: 1.8rem;
+  }
+  
+  .details-price {
+    font-size: 1.5rem;
+  }
+}

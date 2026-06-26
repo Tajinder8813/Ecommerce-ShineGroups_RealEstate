@@ -1,0 +1,242 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  background: var(--primary-grey);
+  padding: 0.75rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px var(--text-muted);
+  border-bottom: 2px solid var(--accent-green);
+}
+
+.nav-container {
+
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Brand Branding */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+
+}
+.logo:hover {
+  transform: scale(1.30); /* Subtle pop on hover */
+}
+.navbar-logo-img {
+  height: 42px; /* Standard height for navbars */
+  width: auto;  /* Maintains aspect ratio */
+  object-fit: contain;
+  /* If the logo is white and needs to "pop" more against the purple */
+  filter: drop-shadow(0 2px 4px var(--text-muted));  
+  /* Optimization for high-res screens */
+  image-rendering: -webkit-optimize-contrast
+}
+
+.brand-name {
+  
+  color: var(--accent-green);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+  margin-left: 0.5;
+  line-height: 1;
+}
+
+.brand-sub {
+  color: var(--bg-corporate);
+  font-weight: 300;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--bg-corporate);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--accent-green);
+}
+.nav-links a.active {
+  color: var(--accent-green) !important;
+  font-weight: 700;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-green);
+  border-radius: 2px;
+  animation: navLineExtend 0.2s ease-out forwards;
+}
+@keyframes navLineExtend {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Auth Buttons */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.login-btn {
+  background: var(--primary-grey);
+  border: 1px solid var(--accent-green);
+  color: var(--bg-corporate);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.login-btn:hover {
+  background: var(--accent-green);
+  border-color: var(--primary-grey);
+}
+
+/*Menu Hidden on desktop styling */
+.menu-toggle {
+  display: none; 
+  background: none;
+  border: none;
+  color: var(--bg-corporate);
+  cursor: pointer;
+  z-index: 1001;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100vh;
+  background: var(--primary-grey);
+  transition: 0.3s ease-in-out;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-menu.active {
+  right: 0; /* Slide in */
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-nav-links a {
+  color: var(--bg-corporate);
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+.mobile-nav-links a.active {
+  color: var(--accent-green) !important;
+  font-weight: 700;
+  background: rgba(34, 197, 94, 0.08); /* Light tint for menu tracking */
+  padding: 8px 24px;
+  border-radius: 8px;
+}
+
+.mobile-nav-links a.active svg {
+  color: var(--accent-green);
+}
+
+
+
+.join-btn {
+  background: var(--accent-green);
+  border: none;
+  color: var(--primary-grey);
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.join-btn:hover {
+  background: var(--accent-green);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px var(--accent-green);
+}
+
+/* Responsive Logic */
+@media (max-width: 768px) {
+  .navbar-logo-img {
+    height: 35px; /* Slightly smaller for mobile screens */
+  }
+  
+ 
+  .nav-links{
+    display: none; /* Hide links on mobile, usually replaced by a burger menu */
+
+  }
+  .nav-auth .login-btn, .join-btn{
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+ .mobile-nav-links .login-btn {
+    display: block;
+    
+  }
+  .mobile-nav-links .join-btn{
+    display: block;
+    
+  }
+  .brand-name {
+    font-size: 1.1rem;
+  }
+}

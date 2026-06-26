@@ -1,0 +1,641 @@
+
+
+/* About Page Premium Layout Foundations */
+.about-hero {
+  background: linear-gradient(rgba(51, 53, 56, 0.85), rgba(51, 53, 56, 0.85)), url('../assets/logo_extracted.png') no-repeat center;
+  background-size: contain;
+  background-color: var(--text-muted);
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 40px;
+  border-radius: var(--radius-premium);
+}
+
+.about-hero-overlay {
+  /*max-width: 800px;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-badge {
+  background: color-mix(in srgb, var(--accent-green) 10%, transparent);
+  color: var(--accent-green);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+}
+
+.about-hero h1 {
+  color: var(--bg-corporate);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.about-hero p {
+  color: rgba(217, 215, 215, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-cta-btns {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.btn-hero-primary {
+  background: var(--accent-green);
+  color: var(--text-main);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-hero-primary:hover {
+  background: var(--bg-corporate);
+  transform: translateY(-2px);
+  box-shadow: var(--accent-green) 0px 4px 12px;
+}
+
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-hero-secondary:hover {
+  background: var(--primary-grey);
+  border-color: var(--white);
+  box-shadow: var(--bg-corporate) 0px 4px 12px;
+}
+
+/* Container Utility Layout */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-subtitle {
+  color: var(--accent-green);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-header-center {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-header-center h2 {
+  font-size: 2rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.header-underline {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-green);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Intro Grid Layout Structure */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.intro-text h2 {
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.stats-sidebar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-premium-card {
+  background: var(--white);
+  border: 1px solid var(--primary-grey);
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.stat-premium-card h3 {
+  font-size: 2.5rem;
+  color: var(--accent-green);
+  font-weight: 800;
+  margin: 0;
+}
+
+.stat-premium-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Partners Layout */
+.partners-section {
+  background: var(--bg-corporate);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.partner-profile-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 30px 24px;
+  text-align: center;
+  border: 1px solid var(--primary-grey);
+  box-shadow: 0 10px 15px -3px var(--text-main);
+  transition: transform 0.2s;
+}
+
+.partner-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px var(--accent-green);
+}
+
+.partner-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  background: #eafaf1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.partner-profile-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.partner-role {
+  color: var(--accent-green);
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.partner-profile-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* JBA Structural Alliance Section Layout */
+.jba-card-wrapper {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+  color: white;
+}
+
+.alliance-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.jba-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: color-mix(var(--accent-green) 80%, white);
+  
+}
+
+.jba-info p {
+  color: var(--bg-corporate);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.jba-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  color: color-mix(var(--bg-corporate) 50%, white);
+}
+
+.jba-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: color-mix(var(--bg-corporate) 80%, black);
+}
+
+.jba-visual-placeholder {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.jba-visual-placeholder span {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* Why Choose Us Cards */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.why-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.why-card h4 svg {
+  color: var(--accent-green);
+  flex-shrink: 0;
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Mission / Vision */
+.mission-vision-section {
+  background: #f8fafc;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.mv-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.mv-icon-box {
+  background: #eafaf1;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+  margin: 0 auto 20px;
+}
+
+.mv-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.mv-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Flow Timeline Process Layout */
+.process-horizontal-flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.process-step-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.step-icon-ring {
+  width: 54px;
+  height: 54px;
+  background: var(--white);
+  border: 2px solid var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+  position: relative;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.step-counter-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--text-muted);
+  color: var(--white);
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.process-step-node h4 {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.optional-tag {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg-corporate);
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.step-connector-line {
+  position: absolute;
+  top: 27px;
+  right: -15%;
+  width: 30%;
+  height: 2px;
+  background: var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+/* History Milestones Layout */
+.history-section {
+  background: var(--bg-corporate);
+}
+
+.history-vertical-line {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.history-vertical-line::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--accent-green);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.history-milestone-node {
+  padding: 10px 40px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.history-milestone-node::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -6px;
+  background-color: var(--white);
+  border: 3px solid var(--accent-green);
+  top: 24px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.right-node {
+  left: 50%;
+}
+
+.right-node::after {
+  left: -6px;
+}
+
+.milestone-content-box {
+  padding: 20px;
+  background: var(--white);
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--primary-grey);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.milestone-year {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent-green);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.milestone-content-box p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Service Areas */
+.areas-pill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.area-pill-node {
+  background: var(--white);
+  border: 1px solid var(--primary-grey);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Contact CTA Banner Box Layout */
+.about-cta-footer-banner {
+  background: linear-gradient(rgba(51, 53, 56, 0.85), rgba(51, 53, 56, 0.85)), url('../assets/logo_extracted.png'), no-repeat center ;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.cta-inner-content h2 {
+  color: var(--white);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cta-inner-content p {
+  color: var(--bg-corporate);
+  margin-bottom: 24px;
+  font-size: 1.1rem;
+}
+
+.cta-action-row-btns {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-cta-accent {
+  background: var(--accent-green);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cta-accent:hover {
+  background: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+.btn-cta-outline {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cta-outline:hover {
+  background: var(--primary-grey);
+}
+
+/* Responsiveness Layer */
+
+@media(max-width: 992px) {
+  .intro-grid, .jba-card-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .partners-grid, .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-horizontal-flow {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+  .step-connector-line {
+    display: none;
+  }
+}
+
+@media(max-width: 768px) {
+  .partners-grid, .why-grid, .mv-grid, .stats-sidebar-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero h1 { font-size: 1.8rem; }
+  .history-vertical-line::after { left: 31px; }
+  .history-milestone-node { width: 100%; padding-left: 70px; padding-right: 0; }
+  .right-node { left: 0; }
+  .history-milestone-node::after { left: 25px; right: auto; }
+}

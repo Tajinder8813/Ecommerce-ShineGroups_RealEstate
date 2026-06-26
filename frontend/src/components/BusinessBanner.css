@@ -1,0 +1,198 @@
+
+.business-banner {
+  /*background: linear-gradient(135deg, #312e81 0%, #4338ca 100%);*/
+  color: var(--primary-grey);
+  padding: 40px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  background-image: url('../assets/image\ \(1\).jpg');
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 20s infinite;
+}
+@keyframes slideShow {
+  0% { background-image: url('../assets/image\ \(2\).jpg'); }
+  33% { background-image: url('../assets/image\ \(3\).jpg'); }
+  66% { background-image: url('../assets/image\ \(4\).jpg'); }
+  100% { background-image: url('../assets/image\ \(1\).jpg'); }
+}
+
+.banner-decoration {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 400px;
+  height: 400px;
+  background: var(--grey);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.banner-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.banner-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0; /* Space between logo and "Building Trust" */
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+}
+.banner-logo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right, 
+    transparent, 
+    var(--text-muted), 
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shineSweep 5s infinite;
+}
+
+
+@keyframes shineSweep {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; } /* Creates a delay before the next shine */
+}
+
+.banner-main-logo {
+  width: 30%; /* Adjust based on your logo's shape */
+  height: auto;
+  object-fit: contain;
+  /* This ensures a white logo glows slightly against the dark background */
+  filter: drop-shadow(0 0 8px var(--primary-grey));
+}
+.banner-tagline {
+  color: var(--accent-green);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  width: fit-content;
+  margin: 0 auto 15px; /* Center and add bottom margin */
+  padding: 5px;
+  border-radius: 10px;
+  text-shadow: 0 2px 4px var(--text-main);
+  
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  line-height: 1.1;
+  color: var(--accent-green);
+  font-weight: 900;  
+  text-shadow: 2px 4px 6px var(--text-main);
+
+}
+
+.banner-highlight 
+{
+  font-size:1.2rem;
+  color: var(--bg-corporate);
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 15px;
+  text-shadow: 2px 4px 6px var(--text-main);
+}
+
+/* Trust Signals Bar */
+.trust-bar {
+  display: inline-flex;
+  gap: 25px;
+  color: var(--bg-corporate);
+  padding: 15px 35px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  font-size: 0.9rem;
+  border: 1px solid var(--text-muted);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 2px 4px 6px var(--text-main);
+}
+
+.rating-text {
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+/* Button Container */
+.banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-gold {
+  background: var(--accent-green);
+  color: var(--bg-corporate);
+  border: none;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px var(--primary-grey);
+  text-shadow: 0 2px 4px var(--text-main);
+}
+
+.btn-primary-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px var(--accent-green);
+  color: var(--primary-grey);
+  text-shadow: none;
+
+}
+
+.btn-secondary-outline {
+  background: var(--bg-corporate);
+  color: var(--primary-grey);
+  border: 2px solid var(--text-muted);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-outline:hover {
+  background: var(--primary-grey);
+  border-color: var(--bg-corporate);
+  color: var(--bg-corporate);
+  box-shadow: 0 15px 25px var(--bg-corporate);
+}

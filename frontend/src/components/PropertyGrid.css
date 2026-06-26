@@ -1,0 +1,162 @@
+/* --- PropertyGrid.css --- */
+
+.property-section {
+  padding: 60px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--bg-corporate);
+}
+
+.section-header {
+  margin-bottom: 40px;
+  text-align: left; /* Aligned left for a premium corporate look */
+  border-left: 4px solid var(--accent-green); /* Accent line using your theme color */
+  padding-left: 20px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--primary-grey);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.property-filter-form{
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  background: var(--bg-corporate);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-light);
+  margin-bottom: 30px;
+  align-items: space-between;
+
+    
+}
+.form-label{
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 4px ;
+}
+
+.form-input{  
+  width: 90%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--text-muted);
+  background: var(--white);
+}
+.form-select
+{
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--text-muted);
+  background: var(--white);
+}
+.form-actions{
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.form-button-search{
+  flex: 2;
+  padding: 10px; 
+  background: var(--accent-green); 
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-button-reset{
+  flex: 1;
+  padding: 10px; 
+  background: var(--text-muted); 
+  color: var(--bg-corporate);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+ 
+/* --- The Grid Layout --- */    
+.property-grid {
+  display: grid;
+  /* Automatically creates columns: minimum 320px wide, fills space otherwise */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* --- States: Loading, Error, No Data --- */
+.no-data {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 60px;
+  text-align: center;
+  color: var(--text-muted);
+  grid-column: 1 / -1; /* This makes it span the whole width */
+  margin-top: 20px;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 100px 20px;
+  width: 100%;
+  grid-column: 1 / -1; /* Spans across all columns */
+}
+
+.loading-state p {
+  font-size: 1.2rem;
+  color: var(--primary-grey);
+  font-weight: 600;
+  /* Simple pulse animation for the loader */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.no-data {
+  background: var(--bg-corporate);
+  border-radius: 12px;
+  border: 2px dashed var(--text-muted);
+  color: var(--text-muted);
+}
+
+/* --- Animation --- */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .property-section {
+    padding: 40px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .property-grid {
+    gap: 20px;
+  }
+}
