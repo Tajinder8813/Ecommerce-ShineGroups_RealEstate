@@ -1,5 +1,16 @@
-# Shine Associates Real Estate Portal
+# Shine Groups Real Estate – Full Stack E-Commerce Web Application
 
+A full-stack real estate marketplace built using React, FastAPI, MySQL, SQLAlchemy, JWT Authentication, Render, Vercel, and Aiven Cloud.
+
+## Live Demo
+
+### Frontend (Vercel)
+
+https://ecommerce-shine-groups-real-estate.vercel.app/
+
+### Backend API
+
+https://ecommerce-shinegroups-realestate-backend.onrender.com
 ## Overview
 
 Shine Associates Real Estate Portal is a full-stack web application developed using React, FastAPI, and MySQL. The platform allows users to browse property listings, register accounts, manage their own properties, and contact property owners through an inquiry system. Administrators have additional privileges to manage users, properties, and inquiries.
@@ -64,6 +75,9 @@ This project demonstrates modern full-stack web development concepts including a
 * Database: Aiven
 
 ---
+## Screenshots
+
+(Add the screenshots you've already uploaded.)
 
 ## Project Structure
 
@@ -133,6 +147,16 @@ Database hosted on Aiven MySQL
 
 ##NOTE 
 --- Free deployment services are used therefore speed is very slow .
+
+## Environment Variables
+
+Create a .env file inside the backend folder.
+
+DATABASE_URL=your_database_url
+SECRET_KEY=your_secret_key
+ADMIN_EMAIL=your_admin_email
+ADMIN_PASSWORD=your_admin_password
+ADMIN_SECURITY_PIN=your_pin
 
 ## Learning Outcomes
 
