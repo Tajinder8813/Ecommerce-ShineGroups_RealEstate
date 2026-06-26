@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create base Axios instance pointing to  FastAPI server
 const api = axios.create({
-  baseURL: 'http://localhost:8000', // Update this to match  FastAPI dev port
+  baseURL: 'https://ecommerce-shinegroups-realestate-backend.onrender.com', // Update this to match  FastAPI dev port
   timeout: 10000, //10 seconds
 });
 
