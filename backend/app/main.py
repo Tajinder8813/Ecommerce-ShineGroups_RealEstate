@@ -159,7 +159,7 @@ def read_root():
     return {"message": "Shine Server is live ! "}
 
 
-@app.post("/register", response_model=schemas.UserRespo nse)
+@app.post("/register", response_model=schemas.UserResponse)
 def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     # Check if a user with this email already exists in your MySQL table
     existing_user = crud.get_user_by_email(db, email=user.email)
